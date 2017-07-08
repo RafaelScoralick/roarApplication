@@ -1,0 +1,12 @@
+<article class="blog-pagina container" id="post-{{::vm.data.id}}">
+	<div id="article" class="post">
+		<div class="page-header">
+			<h2 class="entry-title">
+				<a ng-bind-html="::vm.tru(vm.data.title.rendered)"></a>
+			</h2>
+		</div>
+
+		<div class="post-content" ng-bind-html="::vm.tru(vm.data.content.rendered)">
+		</div>
+	</div>
+</article>

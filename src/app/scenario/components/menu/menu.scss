@@ -1,0 +1,30 @@
+.owl-carousel-menu{
+    z-index: 0 !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: #333;
+    .owl-stage{
+        min-width: 100vw;
+        &>.owl-item{
+            width: initial !important;
+            &>.owl-menu-lista{
+                margin:0 0;
+                list-style: none;
+                -webkit-padding-start: 0;
+                &>.item {
+                    font-size: 1.1em;
+                    padding: 1em;
+                    &>.nav-link {
+                        z-index: 1;
+                        line-height: 20px;
+                        color:#ddd;
+                    }
+                }&:focus,&:hover{
+                  background-color: #fff;
+                  .item>.nav-link{
+                    color: #000;
+                  }
+                }
+            }
+        }
+    }
+}

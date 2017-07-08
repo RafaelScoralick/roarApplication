@@ -1,0 +1,36 @@
+<!-- 
+
+encaixar isso em algum lugar
+
+ <div class="card-categories">
+      <a class="card-cat" ng-repeat="cat in vm.data.roarCategorys track by cat.cat_ID" 
+        ui-sref="root.blog({ id: post.id, slug: post.slug})"
+        ng-bind="::cat.cat_name">
+      </a> 
+    </div>
+    
+-->
+
+<article id="post-{{::vm.data.id}}" ng-hide="vm.hide" 
+  ng-swipe-right="vm.hide = true" ng-cloak class="card">
+   
+	<a class="card-link" ui-sref="root.post({ id: vm.data.id, slug: vm.data.slug })">
+    <img class="card-img-top" ng-src="{{::vm.data.better_featured_image.media_details.sizes.medium.source_url}}">
+    <div class="card-img-overlay">
+      <span fb-save id="{{::vm.data.id}}" slug="{{::vm.data.slug}}"></span>
+  	</div>
+  </a>
+  
+  <div class="card-block">
+    <p class="date">{{::vm.data.date | date:"fullDate"}}</p>
+    <a class="card-link" ui-sref="root.post({ id: vm.data.id, slug: vm.data.slug })">
+      <p class="card-title" ng-bind-html="vm.tru(vm.data.title.rendered)"></p>
+    </a>
+  </div>
+  
+  <div class="card-footer">
+  	<span class="card-text"><i class="fa fa-clock-o" aria-hidden="true"></i> <span class="time2read" ng-bind="::vm.data.time2read"></p></span>
+  </div>
+ 
+</article>
+

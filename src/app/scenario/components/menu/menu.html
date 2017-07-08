@@ -1,0 +1,19 @@
+<nav class="roar-nav">
+    <div class="owl-carousel owl-carousel-menu">
+        <ul class="owl-menu-lista" >
+            <li class="item" ui-sref-active="active">
+                <a class="nav-link" ui-sref="root.blog({ slug: 'trends'})" >
+                    Trends
+                </a>
+            </li>
+        </ul>
+        <ul class="owl-menu-lista" carousel-item ng-repeat="post in ::vm.data track by post.id">
+            <li class="item" ui-sref-active="active">
+                <a class="nav-link" ng-bind-html="::vm.tru(post.name)" 
+                    ui-sref="root.blog({ id: post.id, slug: post.slug})" >
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+

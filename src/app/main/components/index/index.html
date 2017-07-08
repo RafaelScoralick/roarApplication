@@ -1,0 +1,66 @@
+<article class="blog-pagina" id="post-{{::vm.data.id}}">
+	<div id="article" class="index" roar-scroll>
+		
+		<div class="page-header" ng-style="vm.image.banner">
+			<span class="textos-hearder">
+				<h1 class="titulo">
+					<a><strong>Descubra o old school</strong></a>
+				</h1>
+				<h4 class="subtitulo">Uma editora especializada em rpgs old school e retro-games</h4>
+			</span>
+		</div>
+
+		<div class="features">
+			<span class="box-feature">
+				<header class="header">
+					<img class="img-fluid box-ssss-img" ng-src="{{::vm.image.elmo}}"/>
+					<span class="text-ssss">Regras Simples</span>
+				</header>
+			</span>
+			<span class="box-feature">
+				<header class="header">
+					<img class="img-fluid box-ssss-img" ng-src="{{::vm.image.elmo}}"/>
+					<span class="text-ssss">Desafio a criatividade</span>
+				</header>
+			</span>
+			<span class="box-feature">
+				<header class="header">
+					<img class="img-fluid box-ssss-img" ng-src="{{::vm.image.elmo}}"/>
+					<span class="text-ssss">Adptabilidade extrema</span>
+				</header>
+			</span>
+			<span class="box-feature">
+				<header class="header">
+					<img class="img-fluid box-ssss-img" ng-src="{{::vm.image.elmo}}"/>
+					<span class="text-ssss">Regras Simples</span>
+				</header>
+			</span>
+			<span class="box-feature">
+				<header class="header">
+					<img class="img-fluid box-ssss-img" ng-src="{{::vm.image.elmo}}"/>
+					<span class="text-ssss">Modo Hardcore</span>
+				</header>
+			</span>
+		</div>
+		<div class="eafs-landing" ng-style="vm.image.banner2">
+		<img class="img-fluid img-landing" ng-src="{{::vm.image.imagelanding}}"/>
+		<span class="textos-landing">
+			<p>
+				Em eras passadas, grandes reinos cobriam este mundo. 
+				Agora, suas ruínas estão espalhadas pelas regiões selvagens 
+				que cercam as poucas e decadentes Cidades-Estados. 
+				Neste perigoso cenário, bravos aventureiros, empunhando 
+				espadas afiadas e feitiços sinistros, buscam glória, 
+				ouro e segredos proibidos.
+			</p>
+			
+		</span>
+		<span class="calltoaction">
+			<button class="calltoaction-btn" ui-sref="root.blog({ slug: destaques})">
+			Quer Saber mais?
+			</button>
+		</span>
+		
+		</div>
+	</div>
+</article>

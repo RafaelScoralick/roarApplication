@@ -1,0 +1,192 @@
+/* configurações */
+$color-font: #6B6B6B;
+$color-font2: #777;
+$size-font: 14px;
+$font-family:  'Open Sans', sans-serif;
+$color-link: #DA4453;
+
+$logo-size: 5em;
+$logo-size2: 3em;
+
+html, body {
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+    font-size: $size-font;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a,a:hover, a:focus {
+    color: $color-link;
+    text-decoration: none;
+}
+
+
+.loader{
+    margin: 10vh 0;
+}
+.relative {
+    position: relative;
+}
+
+@font-face {
+    font-family: ssff;
+    //src: local('cochin'),url("build/fonts/cochin-lt-std-bold.otf") format('truetype');
+    //font-weight: 700; 
+}
+.cochin-font{
+    font-family: cochin !important;  
+} 
+
+
+/* reescrevendo o css do core do wordpress!
+-------------------------------------------------------------- */
+
+.size-thumbnail{
+    
+}
+
+.size-medium{
+    
+}
+
+
+.size-full, .size-large{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+.aligncenter{
+    display: block;
+    margin: 5px auto 5px auto;
+}
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption .alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption .alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption .alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+.wp-caption .wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/*************************************/
+
+
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 576px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    max-width: 100%;
+  }
+}
+
+
+/************************************/
+.ng-cloak {
+    display: none !important;
+ }

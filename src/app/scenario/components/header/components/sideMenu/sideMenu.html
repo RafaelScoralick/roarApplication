@@ -1,0 +1,39 @@
+<sidebarjs class='roar-side-menu' sidebarjs-config="{documentSwipeRange: '5', documentMinSwipeX: '1'}">
+    <nav class="roar-side-menu-nav">
+        <ul class="nav flex-column">
+            <li class="nav-item" role="link">
+                <a class="row justify-content-center" ui-sref="root.home" sidebarjs-toggle>
+                    <img class="img-fluid" ng-src="{{::vm.image}}">
+                </a>
+            </li> 
+            
+            <li class="nav-item">
+                <a class="nav-link" sidebarjs-toggle ui-sref="root.home" >
+                    <span class="icontext">
+                        <i class="" aria-hidden="true"></i>
+                        <span class="texto">Home</span>
+                    </span>
+                </a>                
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" sidebarjs-toggle ui-sref="root.blog({ id: 2, slug: 'destaques'})" >
+                    <span class="icontext">
+                        <i class="" aria-hidden="true"></i>
+                        <span class="texto">Blog</span>
+                    </span>
+                </a>                
+            </li>
+            
+            <li class="nav-item" ng-repeat="item in vm.data | orderBy: 'menu_order'  track by item.id">
+                <a class="nav-link"
+                sidebarjs-toggle ui-sref="root.page({ id: item.id, slug: item.slug })" >
+                    <span class="icontext">
+                        <i class="{{::item.fontawesome}}" aria-hidden="true"></i>
+                        <span class="texto" ng-bind-html=::item.title.rendered></span>
+                    </span>
+                </a>                
+            </li>
+        </ul>
+    </nav>
+</sidebarjs>

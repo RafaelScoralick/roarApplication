@@ -1,0 +1,45 @@
+	<article class="blog-post container" ng-if="vm.data" id="post-{{::vm.data.id}}" ng-swipe-left="vm.olar()" >
+		<div id="article" class="post">
+			<div class="page-header">
+				<div class="fbdata">
+					<span class="fb-save"
+						data-uri="https://oldskull-rafaelscoralick-1.c9users.io/#!/blog/&#123;&#123;vm.data.slug&#125;&#125;/&#123;&#123;vm.data.id&#125;&#125;" 
+						data-size="large">
+					</span><strong class="data">{{::vm.data.date | date:"fullDate"}}</strong>
+				</div>
+	
+				<h2 class="entry-title">
+					<a class="tittle" ui-sref="root.post({ id: vm.data.id, slug: vm.data.slug })" rel="bookmark" ng-bind-html="::vm.tru(vm.data.title.rendered)"></a>
+				</h2>
+			</div>
+			<div class="post-content" ng-bind-html="::vm.tru(vm.data.content.rendered)">
+			</div>
+		</div>
+		<div class="jumbotron ng-cloak">
+			<h2>Publicidade do autor</h2>
+			<p>espaço para o autor publicar sobre algum evento ou produto</p>
+		</div>
+		
+		<div class="fb-quote"></div>
+		<div fb-like></div>
+		<div class="post-tags">
+			<span class="badge badge-danger" 
+				ng-repeat="tag in ::vm.data.roarTags track by tag.term_id" >
+				<a class="badge-link" ui-sref="root.tags({slug:tag.name, id: tag.term_id})" ng-bind="::tag.name"></a>
+			</span>
+		</div>
+		
+		<div class="perfil text-center">
+			
+			<div class="info">
+				<div class="avatar-data" ng-bind-html="::vm.tru(vm.data.roarAuthor.gravatar)"></div>
+				<div>
+					<strong class="autor-nome" ng-bind-html="::vm.tru(vm.data.roarAuthor.name)"></strong>
+					<p class="autor-descrição" ng-bind-html="::vm.tru(vm.data.roarAuthor.descricao)"></p>
+				</div>
+			</div>
+		</div>
+	
+	
+		<div disqus="::vm.data.id" title="::vm.data.slug"></div>
+	</article>

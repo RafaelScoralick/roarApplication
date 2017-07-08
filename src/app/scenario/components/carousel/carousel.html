@@ -1,0 +1,11 @@
+<div class="owl-carousel-black owl-carousel owl-theme" ng-show="vm.isState('root.blog')">
+<figure carousel-item class="item" ng-repeat="post in ::vm.data track by post.id">
+    <a class="owllink" ui-sref="root.post({ id: post.id, slug: post.slug })">
+        <img class="img-fluid" ng-src="{{::post.better_featured_image.media_details.sizes.medium.source_url}}">
+        <div class="camada"></div>
+        <figcaption class="figcaption">
+            <p class="owltexto" ng-bind-html="::post.title.rendered"></p>
+        </figcaption>
+    </a>
+</figure>
+</div>

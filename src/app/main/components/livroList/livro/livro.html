@@ -1,0 +1,6 @@
+<article id="post-{{::vm.data.id}}" class="livro">
+	<a class="card-link" ui-sref="root.livro({ id: vm.data.id, slug: vm.data.slug })">
+    <img class="card-img-top" ng-src="{{::vm.data.info.image}}">
+  </a>
+</article>
+
